@@ -11,7 +11,7 @@
 کد زیر را در انتهای فایل **`functions.php`** قالب فعال وردپرس خود و یا در یک افزونه سفارشی اضافه کنید.
 
 ```php
-function mehdiamdev_search_filter($query) {
+function saeed_search_filter($query) {
     // اطمینان از اینکه کد فقط در بخش کاربری سایت، برای کوئری اصلی و در صفحه جستجو اجرا می‌شود
     if ( ! is_admin() && $query->is_main_query() ) {
         if ( $query->is_search ) {
@@ -20,7 +20,7 @@ function mehdiamdev_search_filter($query) {
         }
     }
 }
-add_action( 'pre_get_posts', 'mehdiamdev_search_filter' );
+add_action( 'pre_get_posts', 'saeed_search_filter' );
 ```
 
 -----
